@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  # get 'maps/index'
+  # get 'maps/show'
   devise_for :users
-  root to: "posts#index"
+  root to: "maps#index"
   resources :posts, only: [:new, :create]
 end
