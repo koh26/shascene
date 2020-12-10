@@ -2,12 +2,56 @@
   <div class="inner">
     <% if user_signed_in? %>
        <div class="greeting">
-         こんにちは、
          <%= link_to "#{current_user.nickname}さん", root_path, class: :greeting__link%>
        </div>
      <% end %>
-    <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+
+     <div class="map">
+     <%= image_tag "miyagi-map.png", name: "miyagimap", width: "700", height: "620", border: "0", id: "miyagimap", usemap: "#m_miyagimap", alt: "宮城県の市町村マップの画像" %>
+     <map name="m_miyagimap" id="m_miyagimap">
+  <area shape="rect" coords="283,440,319,452" href="map13-iwanuma.html" alt="">
+  <area shape="rect" coords="369,388,417,400" href="map12-tagajo.html" alt="">
+  <area shape="rect" coords="403,343,439,355" href="map07-shiogama.html" alt="">
+  <area shape="rect" coords="405,366,454,378" href="map28-shichigahama.html" alt="">
+  <area shape="rect" coords="327,317,363,329" href="map29-rifu.html" alt="">
+  <area shape="rect" coords="362,295,398,307" href="map27-matsushima.html" alt="">
+  <area shape="rect" coords="334,281,370,293" href="map31-osato.html" alt="">
+  <area shape="rect" coords="280,257,316,269" href="map33-ohira.html" alt="">
+  <area shape="rect" coords="293,305,329,317" href="map32-tomiya.html" alt="">
+  <area shape="rect" coords="252,278,288,290" href="map30-taiwa.html" alt="">
+  <area shape="rect" coords="432,160,468,172" href="map14-tome.html" alt="">
+  <area shape="rect" coords="311,101,347,113" href="map15-kurihara.html" alt="">
+  <area shape="rect" coords="216,197,252,209" href="map35-kami.html" alt="">
+  <area shape="rect" coords="249,234,286,246" href="map34-shikama.html" alt="">
+  <area shape="rect" coords="309,202,345,214" href="map17-osaki.html" alt="">
+  <area shape="rect" coords="383,242,419,254" href="map37-misato.html" alt="">
+  <area shape="rect" coords="393,219,429,231" href="map36-wakuya.html" alt="">
+  <area shape="rect" coords="404,294,452,306" href="map16-higashimatsushima.html" alt="">
+  <area shape="rect" coords="464,243,500,255" href="map06-ishinomaki.html" alt="">
+  <area shape="rect" coords="517,273,553,285" href="map38-onagawa.html" alt="">
+  <area shape="rect" coords="514,159,562,171" href="map40-minamisanriku.html" alt="">
+  <area shape="rect" coords="532,69,581,81" href="map08-kesennuma.html" alt="">
+  <area shape="rect" coords="218,469,266,481" href="map20-ogawara.html" alt="">
+  <area shape="rect" coords="248,452,284,464" href="map22-shibata.html" alt="">
+  <area shape="rect" coords="224,434,260,446" href="map21-murata.html" alt="">
+  <area shape="rect" coords="167,438,203,450" href="map18-zao.html" alt="">
+  <area shape="rect" coords="164,394,200,406" href="map23-kawasaki.html" alt="">
+  <area shape="rect" coords="242,497,278,509" href="map11-kakuda.html" alt="">
+  <area shape="rect" coords="90,481,138,493" href="map19-shichikashuku.html" alt="">
+  <area shape="rect" coords="172,496,207,508" href="map09-shiroishi.html" alt="">
+  <area shape="rect" coords="236,556,272,568" href="map24-marumori.html" alt="">
+  <area shape="rect" coords="201,328,237,340" href="map01-sendai-aoba.html" alt="">
+  <area shape="rect" coords="263,325,287,337" href="map05-sendai-izumi.html" alt="">
+  <area shape="rect" coords="308,360,355,372" href="map02-sendai-miyagino.html" alt="">
+  <area shape="rect" coords="229,378,265,390" href="map04-sendai-taihaku.html" alt="">
+  <area shape="rect" coords="312,383,348,395" href="map03-sendai-wakabayashi.html" alt="">
+  <area shape="rect" coords="281,412,317,424" href="map10-natori.html" alt="">
+  <area shape="rect" coords="280,473,316,485" href="map25-watari.html" alt="">
+  <area shape="rect" coords="290,519,325,531" href="map26-yamamoto.html" alt="">
+    </map>
     </div>
+    <%# <div class="card__wrapper"> %>
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+    <%# </div> %>
   </div>
 </main>
