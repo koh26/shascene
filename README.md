@@ -18,7 +18,10 @@
 | -------------- | --------------- | ------------------------------ |
 | title          | string          | null: false                    |
 | about          | text            | null: false                    |
-| day            | date            | null: false                    |
+| day            | date            |                                |
+| city           | text            |                                |
+| number         | text            |                                |
+| building       | text            |                                |
 | user           | references      | null: false, foreign_key: true |
 
 ### Association
