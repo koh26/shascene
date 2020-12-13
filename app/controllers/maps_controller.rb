@@ -4,7 +4,7 @@ class MapsController < ApplicationController
   end
 
   def show
-    @citys = City.find(params[:id])
+    @city = City.find(params[:id])
   end
 
 end
