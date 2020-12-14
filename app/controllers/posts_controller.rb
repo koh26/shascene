@@ -17,6 +17,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    # @city = City.find(params[:map_id])
+    # @post = Post.find(params[:id])
+  end
+
+  def update
+  end
+
   private
 
   def post_params
