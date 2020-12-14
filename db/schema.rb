@@ -37,10 +37,11 @@ ActiveRecord::Schema.define(version: 2020_12_10_033812) do
     t.string "title", null: false
     t.text "about", null: false
     t.date "day"
-    t.string "city"
+    t.string "town"
     t.string "number"
     t.string "building"
     t.bigint "user_id"
+    t.integer "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"

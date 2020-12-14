@@ -5,6 +5,8 @@ class MapsController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @post = Post.where(city_id: params[:id])
   end
+
 
 end

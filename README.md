@@ -19,9 +19,10 @@
 | title          | string          | null: false                    |
 | about          | text            | null: false                    |
 | day            | date            |                                |
-| city           | text            |                                |
+| town           | text            |                                |
 | number         | text            |                                |
 | building       | text            |                                |
+| city_id        | integer         | null: false                    |
 | user           | references      | null: false, foreign_key: true |
 
 ### Association

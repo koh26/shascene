@@ -1,2 +1,13 @@
 <%= @city.name %>
+
+<% @post.each do |post| %>
+<%= image_tag post.image %>
+<%= post.title %>
+<%= post.about %>
+<%= post.day %>
+<%= post.town %>
+<%= post.number %>
+<%= post.building %>
+<% end %>
+
 <%= link_to "投稿", new_map_post_path(@city), class: :nav__btn %>

@@ -42,4 +42,7 @@ class City < ActiveHash::Base
     { id: 39, name: '山元町' }
   ]
 
+  include ActiveHash::Associations
+  has_many :citys
+
   end
