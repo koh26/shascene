@@ -1,13 +1,39 @@
+<div class="form-group">
 <%= @city.name %>
+</div>
 
 <% @post.each do |post| %>
+
+<div class="form-group">
 <%= link_to image_tag(post.image.variant(resize: '600x600')),map_post_path(@city, post) %>
+</div>
+
+<div class="form-group">
 <%= post.title %>
+</div>
+
+<div class="form-group">
 <%= post.about %>
+</div>
+
+<div class="form-group">
 <%= post.day %>
+</div>
+
+<div class="form-group">
 <%= post.town %>
+</div>
+
+<div class="form-group">
 <%= post.number %>
+</div>
+
+<div class="form-group">
 <%= post.building %>
+</div>
+
 <% end %>
 
+<div class="register-btn">
 <%= link_to "投稿", new_map_post_path(@city), class: :nav__btn %>
+</div>
