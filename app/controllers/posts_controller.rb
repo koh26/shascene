@@ -17,9 +17,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    # binding.pry
+    @city = City.find(params[:map_id])
+    @post = Post.find(params[:id])
+    # binding.pry
+  end
+
   def edit
-    # @city = City.find(params[:map_id])
-    # @post = Post.find(params[:id])
   end
 
   def update

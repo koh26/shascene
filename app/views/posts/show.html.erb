@@ -1,0 +1,66 @@
+<main class="main">
+  <div class="inner">
+    <div class="prototype__wrapper">
+
+      <p class="prototype__hedding">
+        <%= @post.title %>
+      </p>
+      
+      <%= link_to "by #{@post.user.nickname}", class: :prototype__user %>
+      <% if current_user == @post.user%>
+        <div class="prototype__manage">
+          <%= link_to "編集する", "#", class: :prototype__btn %>
+          <%= link_to "削除する", "#", method: :delete, class: :prototype__btn %>
+        </div>
+      <% end %>
+
+      <div class="prototype__image">
+        <%= image_tag @post.image %>
+      </div>
+
+      <div class="prototype__body">
+
+        <div class="prototype__detail">
+          <p class="detail__title">詳細</p>
+          <p class="detail__message">
+            <%= @post.about %>
+          </p>
+        </div>
+
+        <div class="prototype__detail">
+          <p class="detail__title">撮影日</p>
+          <p class="detail__message">
+            <%= @post.day %>
+          </p>
+        </div>
+
+        <div class="prototype__detail">
+          <p class="detail__title">town</p>
+          <p class="detail__message">
+            <%= @post.town %>
+          </p>
+        </div>
+
+        <div class="prototype__detail">
+          <p class="detail__title">詳細</p>
+          <p class="detail__message">
+            <%= @post.number %>
+          </p>
+        </div>
+
+        <div class="prototype__detail">
+          <p class="detail__title">詳細</p>
+          <p class="detail__message">
+            <%= @post.building %>
+          </p>
+        </div>
+
+      </div>
+
+      
+
+        
+      </div>
+    </div>
+  </div>
+</main>

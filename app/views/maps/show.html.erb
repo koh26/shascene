@@ -1,7 +1,7 @@
 <%= @city.name %>
 
 <% @post.each do |post| %>
-<%= image_tag post.image %>
+<%= link_to image_tag(post.image.variant(resize: '600x600')),map_post_path(@city, post) %>
 <%= post.title %>
 <%= post.about %>
 <%= post.day %>
