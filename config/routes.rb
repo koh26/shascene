@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "maps#index"
   resources :maps, only: [:index, :show] do
-    resources :posts, only: [:new, :create, :show, :edit, :update]
+    resources :posts, only: [:new, :create, :show, :edit, :update, :destroy]
   end
 
 end

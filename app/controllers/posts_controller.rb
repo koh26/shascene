@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @city = City.find(params[:map_id])
@@ -34,7 +34,15 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
 
+  def destroy
+    @post = Post.find(params[:id])
+    if @post.destroy
+      redirect_to map_path(@post.city.id)
+    else
+      redirect_to root_path
+    end
   end
 
   private
