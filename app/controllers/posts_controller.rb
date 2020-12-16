@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_city, only: [:new, :create, :show, :edit]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def new
-    @city = City.find(params[:map_id])
     @post = Post.new
   end
   
   def create
-    @city = City.find(params[:map_id])
     @post = Post.new(post_params)
     if @post.valid?
       @post.save
@@ -18,17 +18,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @city = City.find(params[:map_id])
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @city = City.find(params[:map_id])
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to map_post_path
     else
@@ -37,7 +32,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if @post.destroy
       redirect_to map_path(@post.city.id)
     else
@@ -50,5 +44,14 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:image, :title, :about, :day, :town, :number, :building).merge(user_id: current_user.id, city_id: params[:map_id])
   end
+
+  def set_city
+    @city = City.find(params[:map_id])
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
 
 end
