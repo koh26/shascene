@@ -1,5 +1,5 @@
-<%# クリエイトフォーム %>
-<%= form_with(model: post, url: map_posts_path, method: :post, local: true )do |f| %>
+<%# アップデートのフォーム %>
+<%= form_with(model: post, url: map_post_path, method: :patch, local: true )do |f| %>
 
   <div class="form-group">
     <%= f.label :image, "思い出の画像" %><br />
