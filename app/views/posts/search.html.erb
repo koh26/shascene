@@ -1,0 +1,44 @@
+<%= form_with(url: search_map_posts_path(@post), local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
+<div class="contents row">
+
+  <% @post.each do |post| %>
+
+    <div class="form-group">
+
+        <div class="form-group">
+        <%= image_tag post.image.variant(resize: '600x600') %>
+        </div>
+
+        <div class="form-group">
+        <%= post.title %>
+        </div>
+
+        <div class="form-group">
+        <%= post.about %>
+        </div>
+
+        <div class="form-group">
+        <%= post.day %>
+        </div>
+
+        <div class="form-group">
+        <%= post.town %>
+        </div>
+
+        <div class="form-group">
+        <%= post.number %>
+        </div>
+
+        <div class="form-group">
+        <%= post.building %>
+        </div>
+        
+     </div>
+
+  <% end %>
+
+</div>
