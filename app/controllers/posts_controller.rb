@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_city, only: [:new, :create, :show, :edit]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :comfirmation, only: [:edit, :update, :destroy]
 
   def new
     @post = Post.new
@@ -53,6 +54,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def comfirmation
+    redirect_to root_path unless current_user == @post.user
   end
 
 
