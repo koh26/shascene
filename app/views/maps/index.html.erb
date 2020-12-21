@@ -1,57 +1,78 @@
-<main class="main">
-  <div class="inner">
-    <% if user_signed_in? %>
-       <div class="greeting">
-         <%= link_to "#{current_user.nickname}さん", user_path(current_user), class: :greeting__link%>
-       </div>
-     <% end %>
 
-     <div class="map">
+<div class='title-contents'>
+    <h2 class='service-title'>
+      あの景色を思い出そう
+    </h2>
+    <p class='service-explain'>
+      Shasceneで思い出の景色を共有
+    </p>
+    <p class='service-explain'>
+      画像投稿アプリ
+    </p>
+</div>
+
+<%# aboutボックス %>
+     <div class="info">
+                <p class=about>ABOUT SERVICE</p>
+
+                <div class=into_info>
+                <p>2011.3.11 東日本大震災は多くのものを奪っていきました。 </p>
+                <p>生活していた,遊んでいた景色を思い出ごと攫っていきました。 </p>
+                <p>あなたが持っている何気ない写真を投稿してください。 </p>
+                <p>その写真を見ることで救われる大切な想いがあるはずです。 </p>
+               </div>
+      </div>
+
+   <div class="map">
+
+   <p  class="prefecture">宮城県</p>
+         <%# 宮城県地図 %>
      <%= image_tag "miyagi-map.png", name: "miyagimap", width: "700", height: "620", border: "0", id: "miyagimap", usemap: "#m_miyagimap", alt: "宮城県の市町村マップの画像" %>
-     <map name="m_miyagimap" id="m_miyagimap">
-  <area shape="rect" coords="283,440,319,452" href="/maps/1" alt="">
-  <area shape="rect" coords="369,388,417,400" href="/maps/2" alt="">
-  <area shape="rect" coords="403,343,439,355" href="/maps/3" alt="">
-  <area shape="rect" coords="405,366,454,378" href="/maps/4" alt="">
-  <area shape="rect" coords="327,317,363,329" href="/maps/5" alt="">
-  <area shape="rect" coords="362,295,398,307" href="/maps/6" alt="">
-  <area shape="rect" coords="334,281,370,293" href="/maps/7" alt="">
-  <area shape="rect" coords="280,257,316,269" href="/maps/8" alt="">
-  <area shape="rect" coords="293,305,329,317" href="/maps/9" alt="">
-  <area shape="rect" coords="252,278,288,290" href="/maps/10" alt="">
-  <area shape="rect" coords="432,160,468,172" href="/maps/11" alt="">
-  <area shape="rect" coords="311,101,347,113" href="/maps/12" alt="">
-  <area shape="rect" coords="216,197,252,209" href="/maps/13" alt="">
-  <area shape="rect" coords="249,234,286,246" href="/maps/14" alt="">
-  <area shape="rect" coords="309,202,345,214" href="/maps/15" alt="">
-  <area shape="rect" coords="383,242,419,254" href="/maps/16" alt="">
-  <area shape="rect" coords="393,219,429,231" href="/maps/17" alt="">
-  <area shape="rect" coords="404,294,452,306" href="/maps/18" alt="">
-  <area shape="rect" coords="464,243,500,255" href="/maps/19" alt="">
-  <area shape="rect" coords="517,273,553,285" href="/maps/20" alt="">
-  <area shape="rect" coords="514,159,562,171" href="/maps/21" alt="">
-  <area shape="rect" coords="532,69,581,81" href="/maps/22" alt="">
-  <area shape="rect" coords="218,469,266,481" href="/maps/23" alt="">
-  <area shape="rect" coords="248,452,284,464" href="/maps/24" alt="">
-  <area shape="rect" coords="224,434,260,446" href="m/maps/25" alt="">
-  <area shape="rect" coords="167,438,203,450" href="/maps/26" alt="">
-  <area shape="rect" coords="164,394,200,406" href="/maps/27" alt="">
-  <area shape="rect" coords="242,497,278,509" href="/maps/28" alt="">
-  <area shape="rect" coords="90,481,138,493" href="/maps/29" alt="">
-  <area shape="rect" coords="172,496,207,508" href="/maps/30" alt="">
-  <area shape="rect" coords="236,556,272,568" href="/maps/31" alt="">
-  <area shape="rect" coords="201,328,237,340" href="/maps/32" alt="">
-  <area shape="rect" coords="263,325,287,337" href="/maps/33" alt="">
-  <area shape="rect" coords="308,360,355,372" href="/maps/34" alt="">
-  <area shape="rect" coords="229,378,265,390" href="/maps/35" alt="">
-  <area shape="rect" coords="312,383,348,395" href="/maps/36" alt="">
-  <area shape="rect" coords="281,412,317,424" href="/maps/37" alt="">
-  <area shape="rect" coords="280,473,316,485" href="/maps/38" alt="">
-  <area shape="rect" coords="290,519,325,531" href="/maps/39" alt="">
+
+           <%# 地図の座標指定 %>
+    <map name="m_miyagimap" id="m_miyagimap">
+       <area shape="rect" coords="283,440,319,452" href="/maps/1" alt="">
+       <area shape="rect" coords="369,388,417,400" href="/maps/2" alt="">
+       <area shape="rect" coords="403,343,439,355" href="/maps/3" alt="">
+       <area shape="rect" coords="405,366,454,378" href="/maps/4" alt="">
+       <area shape="rect" coords="327,317,363,329" href="/maps/5" alt="">
+       <area shape="rect" coords="362,295,398,307" href="/maps/6" alt="">
+       <area shape="rect" coords="334,281,370,293" href="/maps/7" alt="">
+       <area shape="rect" coords="280,257,316,269" href="/maps/8" alt="">
+       <area shape="rect" coords="293,305,329,317" href="/maps/9" alt="">
+       <area shape="rect" coords="252,278,288,290" href="/maps/10" alt="">
+       <area shape="rect" coords="432,160,468,172" href="/maps/11" alt="">
+       <area shape="rect" coords="311,101,347,113" href="/maps/12" alt="">
+       <area shape="rect" coords="216,197,252,209" href="/maps/13" alt="">
+       <area shape="rect" coords="249,234,286,246" href="/maps/14" alt="">
+       <area shape="rect" coords="309,202,345,214" href="/maps/15" alt="">
+       <area shape="rect" coords="383,242,419,254" href="/maps/16" alt="">
+       <area shape="rect" coords="393,219,429,231" href="/maps/17" alt="">
+       <area shape="rect" coords="404,294,452,306" href="/maps/18" alt="">
+       <area shape="rect" coords="464,243,500,255" href="/maps/19" alt="">
+       <area shape="rect" coords="517,273,553,285" href="/maps/20" alt="">
+       <area shape="rect" coords="514,159,562,171" href="/maps/21" alt="">
+       <area shape="rect" coords="532,69,581,81" href="/maps/22" alt="">
+       <area shape="rect" coords="218,469,266,481" href="/maps/23" alt="">
+       <area shape="rect" coords="248,452,284,464" href="/maps/24" alt="">
+       <area shape="rect" coords="224,434,260,446" href="m/maps/25" alt="">
+       <area shape="rect" coords="167,438,203,450" href="/maps/26" alt="">
+       <area shape="rect" coords="164,394,200,406" href="/maps/27" alt="">
+       <area shape="rect" coords="242,497,278,509" href="/maps/28" alt="">
+       <area shape="rect" coords="90,481,138,493" href="/maps/29" alt="">
+       <area shape="rect" coords="172,496,207,508" href="/maps/30" alt="">
+       <area shape="rect" coords="236,556,272,568" href="/maps/31" alt="">
+       <area shape="rect" coords="201,328,237,340" href="/maps/32" alt="">
+       <area shape="rect" coords="263,325,287,337" href="/maps/33" alt="">
+       <area shape="rect" coords="308,360,355,372" href="/maps/34" alt="">
+       <area shape="rect" coords="229,378,265,390" href="/maps/35" alt="">
+       <area shape="rect" coords="312,383,348,395" href="/maps/36" alt="">
+       <area shape="rect" coords="281,412,317,424" href="/maps/37" alt="">
+       <area shape="rect" coords="280,473,316,485" href="/maps/38" alt="">
+       <area shape="rect" coords="290,519,325,531" href="/maps/39" alt="">
     </map>
-    </div>
-    <%# <div class="card__wrapper"> %>
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-    <%# </div> %>
+
   </div>
-</main>
+  
+  </div>
+<%# </main> %>

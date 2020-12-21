@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   get 'comments/create'
-  # get 'maps/index'
-  # get 'maps/show'
   devise_for :users
   root to: "maps#index"
   resources :maps, only: [:index, :show] do

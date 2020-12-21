@@ -37,10 +37,9 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
+  background-color: white;
+  /* margin-bottom: 48px; */
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -117,6 +116,8 @@ a {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
+
+
 
 /* メイン */
 
