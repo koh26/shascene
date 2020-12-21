@@ -1,6 +1,9 @@
 <%# アップデートのフォーム %>
 <%= form_with(model: post, url: map_post_path, method: :patch, local: true )do |f| %>
 
+<%# エラー文の表示 %>
+<%= render 'layouts/error_messages', model: f.object %>
+
   <div class="form-group">
     <%= f.label :image, "思い出の画像" %><br />
     <%= f.file_field :image %>
