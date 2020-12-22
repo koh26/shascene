@@ -6,15 +6,20 @@
 
 .login-red-btn {
   width: 100%;
-  background: orange;
-  border: 1px solid orange;
-  color: #fff;
+  background: white;
+  border: 1px solid ;
+  color:gray;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
 }
 
+.login-red-btn:hover {
+  color: white;
+  background: pink;
+}
+
 .login-flash-message {
   text-align: center;
-  color: orange;
+  color: pink;
 }

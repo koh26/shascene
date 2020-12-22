@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
     <header class="header">
       <div class="inner">
 
@@ -21,10 +22,8 @@
           </div>
 
           <% if user_signed_in? %>
-          <div class="nav_right">
-              <%= link_to "#{current_user.nickname}", user_path(current_user), class: :greeting__link %>
-         </div>
             <div class="nav_right">
+              <%= link_to "#{current_user.nickname}", user_path(current_user), class: :user_name %>
                <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: :nav__btn %>
              </div>
              <% else %>
