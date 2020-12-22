@@ -40,6 +40,13 @@ a {
   background-color: white;
   padding: 20px 0;
   box-shadow: 2px 2px 4px;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  padding: 10px; 
+  width: 100%; 
+  z-index: 10;
+  opacity: 0.8;
 }
 
 .inner {
@@ -153,7 +160,6 @@ a {
   list-style: circle;
   color: pink;
 }
-
 
 
 /* メイン */
