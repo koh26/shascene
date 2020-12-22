@@ -16,10 +16,10 @@
 
 .login-red-btn:hover {
   color: white;
-  background: pink;
+  background: #FFDEAD;
 }
 
 .login-flash-message {
   text-align: center;
-  color: pink;
+  color: #FFDEAD;
 }

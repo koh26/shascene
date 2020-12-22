@@ -27,10 +27,6 @@
   opacity: 0.7;
 }
 
-.error{
-  text-align: center;
-  color: pink;
-}
 
 .form-group {
   width: 50%;
@@ -159,7 +155,7 @@
 
 .register-red-btn:hover {
   color: white;
-  background: pink;
+  background: #FFDEAD;
 }
 
 .register-info {
