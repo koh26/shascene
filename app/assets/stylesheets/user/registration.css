@@ -10,6 +10,7 @@
   width: 50%;
   background-color: white;
   padding-bottom: 70px;
+  margin-top: 5px;
 }
 
 .form-header {
@@ -23,6 +24,12 @@
   line-height: 100px;
   border-bottom: 1px solid #f5f5f5;
   font-weight: bold;
+  opacity: 0.7;
+}
+
+.error{
+  text-align: center;
+  color: pink;
 }
 
 .form-group {
@@ -142,12 +149,17 @@
 
 .register-red-btn {
   width: 100%;
-  background: orange;
-  border: 1px solid orange;
-  color: #fff;
+  background: white;
+  border: 1px solid;
+  color: gray;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.register-red-btn:hover {
+  color: white;
+  background: pink;
 }
 
 .register-info {
