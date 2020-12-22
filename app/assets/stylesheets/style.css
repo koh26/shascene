@@ -58,6 +58,10 @@ a {
   opacity: 0.5;
 }
 
+.title_logo:hover{
+  color: #FFDEAD;
+}
+
 .nav_right{
   font-size: 20px;
   margin-top: 3px;
@@ -83,6 +87,10 @@ a {
 .user_name{
   font-size: 30px;
   margin-right: 5px;
+}
+
+.user_name:hover{
+  color: #FFDEAD;
 }
 
 /* .nav__logout{
