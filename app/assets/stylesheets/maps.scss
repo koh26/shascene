@@ -12,6 +12,7 @@
   padding: 5vh 15vw;
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  margin-top: 80px;
 }
 
 /* インフォ */
@@ -62,4 +63,111 @@
     margin-bottom: 30px;
     opacity: 0.6;
     letter-spacing: 5px;
+  }
+
+  .city{
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto;
+    border-bottom: solid 1px #C0C0C0;
+    margin-top:100px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+    letter-spacing: 5px;
+  }
+
+  // 投稿一覧
+
+  .post-contents{
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+  }
+
+  .post-lists{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post-lists>.list{
+    width: 50vh;
+    padding: 1vw;
+    background-color: #FFF;
+  }
+
+  .post-img-content{
+    position: relative;
+  }
+
+  .post-img{
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .post-info{
+    background-color: #FFF;
+    color: black;
+    padding: 1vw;
+  }
+
+  .post-name{
+    font-size: 2.5vh;
+  }
+
+  .post-day{
+    font-size: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+// 投稿ボタン
+  .purchase-btn {
+    width: 120px;
+    background:  #FFDEAD;
+    text-align: center;
+    border-radius: 5%;
+    bottom: 450px;
+    right: 10px;
+    position: fixed;
+    padding: 15px;
+  }
+  
+  .purchase-btn-text {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .purchase-btn-icon {
+    width: 60%;
+  }
+  
+  // 検索フォーム
+  .search-form {
+    text-align: center;
+    padding-top: 32px;
+  }
+  
+  .search-form .search-input {
+    width: 30%;
+    margin-right: 10px;
+  }
+  
+  .search-form .search-btn {
+    width: 5%;
+    border-radius: 5%;
+    background-color: white;
+    opacity: 0.7;
+  }
+
+  .search-form .search-btn:hover{
+    color: white;
+    background: #FFDEAD;
   }

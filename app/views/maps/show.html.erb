@@ -1,45 +1,45 @@
-<div class="form-group">
+<div class="city">
 <%= @city.name %>
 </div>
 
-<%= form_with(url: search_map_posts_path(@city), local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :key, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
+<%# 投稿検索 %>
+   <div >
+     <%= form_with(url: search_map_posts_path(@city), local: true, method: :get, class: "search-form") do |form| %>
+     <%= form.text_field :key, placeholder: "投稿を検索する", class: "search-input" %>
+     <%= form.submit "検索", class: "search-btn" %>
+     <% end %>
+   </div>
+
+     <%# 投稿一覧 %>
+    <div class='post-contents'>
+    <ul class='post-lists'>
+
+      <% @post.each do |post| %>
+      <li class='list'>
+      <%= link_to map_post_path(@city, post) do %>
+        <div class='post-img-content'>
+        <%= image_tag post.image, class: "post-img" %>
+        </div>
+
+        <div class='post-info'>
+
+          <h3 class='post-name'>
+          <%= post.title %>
+          </h3>
+          <div class='post-day'>
+          <%= post.day %>
+          </div>
+
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+
+    </ul>
+    </div>
+
+    <%# 投稿ボタン %>
+<%= link_to(new_map_post_path(@city), class: 'purchase-btn') do %>
+<span class='purchase-btn-text'>投稿する</span>
+  <%= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
-
-      <%# 投稿一覧 %>
-<% @post.each do |post| %>
-
-<div class="form-group">
-<%= link_to image_tag(post.image.variant(resize: '600x600')),map_post_path(@city, post) %>
-</div>
-
-<div class="form-group">
-<%= post.title %>
-</div>
-
-<div class="form-group">
-<%= post.about %>
-</div>
-
-<div class="form-group">
-<%= post.day %>
-</div>
-
-<div class="form-group">
-<%= post.town %>
-</div>
-
-<div class="form-group">
-<%= post.number %>
-</div>
-
-<div class="form-group">
-<%= post.building %>
-</div>
-
-<% end %>
-
-<div class="register-btn">
-<%= link_to "投稿", new_map_post_path(@city), class: :nav__btn %>
-</div>
