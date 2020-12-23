@@ -1,21 +1,36 @@
-<%# アップデートのフォーム %>
-<%= form_with(model: post, url: map_post_path, method: :patch, local: true )do |f| %>
+<%# アップデートフォーム %>
+<%= form_with(model: post, url: map_posts_path, method: :post, class: 'registration-main', local: true )do |f| %>
 
-<%# エラー文の表示 %>
-<%= render 'layouts/error_messages', model: f.object %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      投稿編集
+    </h1>
+  </div>
+
+  <%# エラー文の表示 %>
+  <%= render 'layouts/error_messages', model: f.object %>
 
   <div class="form-group">
-    <%= f.label :image, "思い出の画像" %><br />
+   <div class='form-text-wrap'>
+    <%= f.label :image, "思い出の画像", class: 'form-text' %><br />
+    <span class="indispensable">必須</span>
+   </div>
     <%= f.file_field :image %>
   </div>
 
   <div class="form-group">
-    <%= f.label :title, "思い出の名称" %><br />
+    <div class='form-text-wrap'>
+    <%= f.label :title, "思い出の名称", class: 'form-text' %><br />
+    <span class="indispensable">必須</span>
+    </div>
     <%= f.text_field :title %>
   </div>
 
   <div class="form-group">
-    <%= f.label :about, "詳細" %><br />
+    <div class='form-text-wrap'>
+    <%= f.label :about, "詳細",class: 'form-text' %><br />
+    </div>
     <%= f.text_area :about %>
   </div>
 
@@ -27,7 +42,7 @@
       <%= raw sprintf(
         f.date_select(
         :day,
-        class:'select-birth',
+        class:'form-text',
         id:"birth-date",
         use_month_numbers: true,
         prompt:'--',
@@ -39,22 +54,32 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :town, "シティ" %><br />
+  <div class='form-text-wrap'>
+    <%= f.label :town, "シティ",class: 'form-text' %><br />
+    </div>
     <%= f.text_field :town %>
   </div>
 
   <div class="form-group">
-    <%= f.label :number, "番地" %><br />
+  <div class='form-text-wrap'>
+    <%= f.label :number, "番地",class: 'form-text' %><br />
+    </div>
     <%= f.text_field :number %>
   </div>
 
   <div class="form-group">
-    <%= f.label :building, "建物名" %><br />
+  <div class='form-text-wrap'>
+    <%= f.label :building, "建物名",class: 'form-text' %><br />
+    </div>
     <%= f.text_field :building %>
   </div>
 
-  <div class="register-btn">
-    <%= f.submit "投稿する", class: :form__btn  %>
+  <div class="form-group">
+    <div class="register-btn">
+    <%= f.submit "投稿する", class:"register-red-btn" %>
+    </div>
+  </div>
+
   </div>
 
 <% end %>
