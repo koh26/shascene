@@ -6,7 +6,7 @@
       </h3>
       
       <div class='user-name'>
-      <%= link_to "by #{@post.user.nickname}", user_path(current_user), class: "name_user" %>
+      <%= link_to "by #{@post.user.nickname}", user_path(@post.user.id), class: "name_user" %>
       </div>
 
             <%# 編集と削除(投稿ユーザーのみ) %>

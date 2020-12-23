@@ -29,14 +29,14 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-    <%= f.label :about, "詳細",class: 'form-text' %><br />
+    <%= f.label :about, "思い出について",class: 'form-text' %><br />
     </div>
     <%= f.text_area :about %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">日付</label>
+      <label class="form-text">撮影日</label>
     </div>
     <div class='input-birth-wrap'>
       <%= raw sprintf(
@@ -55,7 +55,7 @@
 
   <div class="form-group">
   <div class='form-text-wrap'>
-    <%= f.label :town, "シティ",class: 'form-text' %><br />
+    <%= f.label :town, "町名",class: 'form-text' %><br />
     </div>
     <%= f.text_field :town %>
   </div>
