@@ -1,63 +1,53 @@
-<main class="main">
-  <div class="inner">
-    <div class="prototype__wrapper">
+  <div class="post-show">
+    <div class="post-box">
 
-      <p class="prototype__hedding">
+      <h3 class="name">
         <%= @post.title %>
-      </p>
+      </h3>
       
-      <%= link_to "by #{@post.user.nickname}", class: :prototype__user %>
+      <div class='user-name'>
+      <%= link_to "by #{@post.user.nickname}", user_path(current_user), class: "name_user" %>
+      </div>
+
+            <%# 編集と削除(投稿ユーザーのみ) %>
       <% if current_user == @post.user%>
-        <div class="prototype__manage">
-          <%= link_to "編集する", edit_map_post_path(@city, @post), class: :prototype__btn %>
-          <%= link_to "削除する", map_post_path(@city, @post), method: :delete, class: :prototype__btn %>
+        <div class="btn">
+          <%= link_to "編集する", edit_map_post_path(@city, @post), class: "post-btn" %>
+          <%= link_to "削除する", map_post_path(@city, @post), method: :delete, class:'post-destroy' %>
         </div>
       <% end %>
 
-      <div class="prototype__image">
+      <div class="post-img-content">
         <%= image_tag @post.image %>
       </div>
 
-      <div class="prototype__body">
+      <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-post">写真について</th>
+          <td class="detail-value"><%= @post.about %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">撮影日</th>
+          <td class="detail-value"><%= @post.day %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">町名</th>
+          <td class="detail-value"><%= @post.town %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">番地</th>
+          <td class="detail-value"><%= @post.number %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">建物名</th>
+          <td class="detail-value"><%= @post.building %></td>
+        </tr>
+      </tbody>
+    </table>
 
-        <div class="prototype__detail">
-          <p class="detail__title">詳細</p>
-          <p class="detail__message">
-            <%= @post.about %>
-          </p>
-        </div>
-
-        <div class="prototype__detail">
-          <p class="detail__title">撮影日</p>
-          <p class="detail__message">
-            <%= @post.day %>
-          </p>
-        </div>
-
-        <div class="prototype__detail">
-          <p class="detail__title">town</p>
-          <p class="detail__message">
-            <%= @post.town %>
-          </p>
-        </div>
-
-        <div class="prototype__detail">
-          <p class="detail__title">詳細</p>
-          <p class="detail__message">
-            <%= @post.number %>
-          </p>
-        </div>
-
-        <div class="prototype__detail">
-          <p class="detail__title">詳細</p>
-          <p class="detail__message">
-            <%= @post.building %>
-          </p>
-        </div>
-
-      </div>
-
-      <div class="prototype__comments">
+      <%# コメント %>
+      <div class="post__comments">
 
         <% if user_signed_in? %>
           <%= form_with model: [@post, @comment],url: map_post_comments_path(@city, @post), local: true do |f|%>
@@ -75,7 +65,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.text%>
-              <%= link_to "（#{comment.user.nickname}）", class: :comment_user %>
+              <%= link_to "（#{comment.user.nickname}）", user_path(comment.user), class: :comment_user %>
             </li>
           <% end %>
         </ul>
@@ -85,4 +75,3 @@
         
     </div>
   </div>
-</main>

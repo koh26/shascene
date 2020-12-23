@@ -112,42 +112,6 @@ a {
   opacity: 0.5;
 } */
 
-/* フォーム周り */
-.form__wrapper{
-  min-height: calc(100vh - 161px);
-}
-
-.form__text {
-  width: 50%;
-}
-
-.field{
-  margin: 10px 0;
-}
-
-.actions{
-  margin-bottom: 40px;
-}
-
-.form__btn{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #fff;
-  text-decoration: none;
-  user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
-  border-radius: 3px;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-  transition: 0.2s ease;
-}
-
-.form__btn:hover {
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
-
 /* エラーメッセージ */
 .error-alert{
   display: flex;
@@ -164,109 +128,104 @@ a {
 
 /* メイン */
 
-.greeting{
-  margin-bottom: 20px;
-}
-.greeting__link{
-  text-decoration: underline;
-}
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
-}
-.card__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  min-height: calc(100vh - 161px);
-}
-.card {
-  width: calc((100% - 50px) / 3);
-  margin-bottom: 40px;
-}
-.card__img {
-  margin-bottom: 16px;
-}
-.card__title {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
-.card__summary {
-  font-size: 16px;
-}
-.card__user {
-  display: block;
-  font-size: 12px;
-  color: #999;
-  text-align: right;
-  text-decoration: underline;
-}
-
 .map {
   text-align: center;
   margin: 50px 0;
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.prototype__hedding{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-.prototype__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  text-decoration: underline;
-}
-.prototype__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.prototype__detail{
+
+.post-show{
+  width: 100vw;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
-}
-.prototype__manage{
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
-}
-.prototype__btn{
-  display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
-}
-.prototype__btn:hover{
-  color: #fff;
-  background: #999;
+  align-items: center;
+  padding: 5vh 0;
 }
 
-.prototype__comments{
-  background-color: #f6f6f6;
+.post-box{
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+
+.post-box>.name{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
+.post-btn{
+  text-align: center;
+  background-color: #FFDEAD;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 5vw;
+  border-radius: 30px;
+}
+
+.post-destroy{
+  background-color: lightgray;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 5vw;
+  border-radius: 30px;
+}
+
+.user-name{
+  margin-bottom: 20px;
+}
+
+.name_user{
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.name_user:hover{
+  color: #FFDEAD;
+}
+
+.detail-table{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-post {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
   padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+}
+
+.post__comments{
+  background-color: #FFDEAD;
+  padding: 20px 200px;
   margin: 28px 0 40px 0;
+  border-radius: 30px;
 }
 
 .comments_lists{
@@ -283,6 +242,15 @@ a {
   color: #999;
   text-decoration: underline;
 }
+
+.field{
+  margin: 10px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
 
 /* ユーザーページ */
 .user__wrapper{
