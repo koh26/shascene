@@ -4,7 +4,7 @@
 
     <%# 投稿検索 %>
    <div >
-     <%= form_with(url: search_map_posts_path(@city), local: true, method: :get, class: "search-form") do |form| %>
+     <%= form_with(url: search_map_post_path(@post), local: true, method: :get, class: "search-form") do |form| %>
      <%= form.text_field :key, placeholder: "投稿を検索する", class: "search-input" %>
      <%= form.submit "検索", class: "search-btn" %>
      <% end %>
