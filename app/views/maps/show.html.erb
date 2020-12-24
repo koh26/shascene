@@ -35,8 +35,21 @@
       </li>
       <% end %>
 
-    </ul>
-    </div>
+      </ul>
+      </div>
+    <%# 投稿一覧 %>
+
+    <%# 投稿ががない場合の表示 %>
+      <% if @post.length == 0 %>
+      <div class='nopost'>
+          <h3 class='city'>
+            思い出の場所を<br>投稿してください
+          </h3>
+        </div>
+        <%# <%= image_tag "noimg.png", class: "item-img" %> 
+      <% end %>
+     <%# /投稿がない場合の表示 %>
+
 
     <%# 投稿ボタン %>
 <%= link_to(new_map_post_path(@city), class: 'purchase-btn') do %>
