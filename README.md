@@ -181,5 +181,3 @@ https://shascene.herokuapp.com/
 ### ER図
 
 https://gyazo.com/1767669c32a2b94101586ddc6c8f3a09
-
-
