@@ -298,12 +298,7 @@ a {
   width: 70%;
   padding: 16px 8px;
 }
-.user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
 /* フッター */
 
 .footer {
@@ -326,10 +321,6 @@ a {
   .page-heading {
     font-size: 24px;
   }
-  .card {
-    width: 48%;
-    margin-bottom: 40px;
-  }
   .prototype_image{
     width: 60%;
   }
@@ -342,16 +333,6 @@ a {
   }
   .page-heading {
     font-size: 20px;
-  }
-  .card {
-    width: 100%;
-    margin-bottom: 60px;
-  }
-  .card__title {
-    font-size: 18px;
-  }
-  .card__summary {
-    font-size: 14px;
   }
   .prototype_image{
     width: 100%;
