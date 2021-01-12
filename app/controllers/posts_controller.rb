@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_city, only: [:new, :create, :show, :edit]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :comfirmation, only: [:edit, :update, :destroy]
