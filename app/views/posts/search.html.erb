@@ -37,3 +37,14 @@
 
     </ul>
     </div>
+
+    <%# 投稿ががない場合の表示 %>
+      <% if @post.length == 0 %>
+      <div class='nopost'>
+          <h3 class='city'>
+            検索と一致する<br>投稿はありません
+          </h3>
+        </div>
+        <%# <%= image_tag "noimg.png", class: "item-img" %> 
+      <% end %>
+     <%# /投稿がない場合の表示 %>
